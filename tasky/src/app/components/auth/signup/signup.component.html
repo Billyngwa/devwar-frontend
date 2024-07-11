@@ -1,1 +1,150 @@
-<p>signup works!</p>
+<main class="main-component">
+    <div class="logo">
+        <img class="ml-[40%] py-2" src="assets/images/logo-no-background.ico" alt="logo">
+        <h1>Register</h1>
+    </div>
+    <form action="" method="post" [formGroup]="signupForm" (ngSubmit)="submitForm()">
+        <div class="form-control name">
+            <div class="first-name">
+                <label for="first name">
+                    Business name
+                </label><br>
+                <input type="text" formControlName="name" class="form-input" id="name" required>
+                <div *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched">
+                    <div *ngIf="signupForm.get('name')?.errors?.['required']">first name is required.</div>
+                  </div>
+            </div>
+            <div class="first-name last-name">
+                <label for="website">
+                    website link
+                </label><br>
+                <input maxlength="20" minlength="3" type="text" formControlName="website" class="form-input"
+                    id="website" required>
+                    <div *ngIf="signupForm.get('website')?.invalid && signupForm.get('website')?.touched">
+                        <div *ngIf="signupForm.get('website')?.errors?.['required']">Last name is required.</div>
+                      </div>
+            </div>
+          
+
+
+        </div>
+        <div class="form-control">
+            <label for="description">
+                Description
+            </label><br>
+            <input type="text" formControlName="description" class="form-input" id="description" required>
+            <div *ngIf="signupForm.get('description')?.invalid && signupForm.get('description')?.touched">
+                <div *ngIf="signupForm.get('description')?.errors?.['required']">Business description is required.</div>
+              </div>
+        </div>
+        <div class="form-control">
+            <label for="phone">
+                Contact line
+            </label><br>
+            <input type="text" formControlName="phone" class="form-input" id="phone" required>
+            <div *ngIf="signupForm.get('phone')?.invalid && signupForm.get('phone')?.touched">
+                <div *ngIf="signupForm.get('phone')?.errors?.['required']">Contact line  is required.</div>
+              </div>
+        </div>
+        <div class="form-control">
+            <label for="address">
+                Address
+            </label><br>
+            <input type="text" formControlName="address" class="form-input" id="address" required>
+            <div *ngIf="signupForm.get('address')?.invalid && signupForm.get('address')?.touched">
+                <div *ngIf="signupForm.get('address')?.errors?.['required']">Contact line  is required.</div>
+              </div>
+        </div>
+        <div class="form-control">
+            <label for="city">
+                City
+            </label><br>
+            <input type="text" formControlName="city" class="form-input" id="city" required>
+            <div *ngIf="signupForm.get('city')?.invalid && signupForm.get('city')?.touched">
+                <div *ngIf="signupForm.get('city')?.errors?.['required']">Contact line  is required.</div>
+              </div>
+        </div>
+        <div class="form-control">
+
+           
+            <select name="difficulty" id="difficulty">
+                <label for="city">
+                    City
+                </label><br>
+                <option value="" disabled="disabled" class="text-[50px]">Select Category</option>
+           
+                <option value="Automotive">Automotive</option>
+                <option value="Automotive">Business Support & Supplies</option>
+                <option value="Computers & Electronics">Computers & Electronics</option>
+                <option value="Construction & Contractors">Construction & Contractors</option>
+
+                <option value="Education">Education</option>
+
+                <option value="Entertainment">Entertainment</option>
+
+                <option value="Food">Food & Dining</option>
+
+                <option value="Health">Health & Medicine</option>
+
+                <option value="Home">Home & Garden</option>
+
+                <option value="Financial">Legal & Financial</option>
+
+                <option value="Manufacturing">Manufacturing, Wholesale,Distribution </option>
+                <option value="Merchants">Merchants (Retail)</option>
+                <option value="Miscellaneous">Miscellaneous</option>
+
+                <option value="Personal Care">Personal Care & Services</option>
+                <option value="Real Estate">Real Estate</option>
+
+                <option value="Web">Web development</option>
+
+                <option value="Import">Import and Export</option>
+
+
+
+
+            </select>
+        </div>
+        <!-- <div class="form-control">
+            <label for="category">
+                Business Category
+            </label><br>
+            <input type="text" formControlName="city" class="form-input" id="city" required>
+            <div *ngIf="signupForm.get('city')?.invalid && signupForm.get('city')?.touched">
+                <div *ngIf="signupForm.get('city')?.errors?.['required']">Contact line  is required.</div>
+              </div>
+        </div> -->
+        <div class="form-control">
+            <label for="">
+                Email address
+            </label><br>
+            <input type="email" formControlName="email" class="form-input email" required>
+            <div *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched">
+                <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+                <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</div>
+            </div>
+        </div>
+        <div class="form-control">
+            <div class="label-password">
+                <label for="">
+                    Password
+                </label>
+               
+            </div>
+            <input minlength="3" type="password" formControlName="password" class="form-input password" required>
+            <div *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched">
+                <div *ngIf="signupForm.get('password')?.errors?.['required']">Password is required.</div>
+              </div>
+        </div>
+        <div class="signin-button">
+
+            <button class="signin submit" type="submit" [disabled]="signupForm.invalid">
+                Register
+            </button>
+        </div>
+        <div class="label-password para">
+            <p>Already a member? <a routerLink="/signin">Sign in</a></p>
+        </div>
+    </form>
+</main>

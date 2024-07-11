@@ -1,1 +1,37 @@
-<p>signin works!</p>
+
+    <main class="main-component">
+        <div class="logo">
+            <img class="ml-[40%] py-2" src="assets/images/logo-no-background.ico" alt="logo">
+            <h1>Sign in to your account</h1>
+        </div>
+        <form action="" method="post" [formGroup]="signinForm" (ngSubmit)="submitForm()">
+            <div class="form-control">
+                <label for="email address" class="email-label">
+                    Email address
+                </label><br>
+                <input type="email" formControlName="email" class="form-input" id="email" required>
+                </div>
+                <div class="form-control">
+                        <label for="password">
+                            Password
+                        </label>
+                <input type="password" formControlName="password" class="form-input password" required>
+            </div>
+            <div class="label-password">
+                <a routerLink="/forgotPassword">Forgot password?</a>
+          <p class="option">Not a member?<a routerLink="/signup">Create Account?</a></p>
+            </div>
+            <div class="signin-button">
+
+                <button class="signin submit" type="submit" [disabled]="signinForm.invalid">Sign In</button>
+            </div>
+            <p class="options">or Continue with</p>
+            <div class="signin-button">
+
+                <button class="signin google-auth">
+                    <img src="assets/images/google-logo-removebg-preview.png" alt="">
+                </button>
+            </div>
+
+        </form>
+    </main>

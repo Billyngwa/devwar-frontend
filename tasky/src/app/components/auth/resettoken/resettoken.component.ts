@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './resettoken.component.html',
-  styleUrl: './resettoken.component.scss'
+  styleUrl: '../signup/signup.component.scss'
 })
 export class ResettokenComponent {
 

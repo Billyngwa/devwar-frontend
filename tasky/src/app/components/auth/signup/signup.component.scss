@@ -1,0 +1,304 @@
+// all forms
+// these colors are for the hovers and their classes where used in js as active for the forms when an action occurs classes,
+// reason why i didn't use the tailwind classes
+$signin_text-color: gray;
+$background-color: #4FC2E1;
+$hover_background-color: rgb(60, 180, 213);
+$text_color: rgb(231 84 128);
+$background:  rgba(199, 199, 199, 0.209);
+.main-component{
+    width: 500px;
+    height: 500px;
+    margin: 70px auto;
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    .logo{
+        // width: 100px;
+        height: 165px;
+        margin: auto;
+        text-align: center;
+
+        img{
+            width: 25%;
+            
+        }
+        h1{
+            margin-top: -20px;
+            font-size: 30px;
+        }
+    }
+    form{
+        width: 95%;
+        margin: auto;
+        height: 330px;
+        // background: red;
+       
+        // registration form
+        .name{
+            display: flex;
+            justify-content: space-between;
+            width: 98%;
+
+            .first-name{
+                width: 48%;
+            }
+        }
+
+        .form-control{
+          margin-top: 10px;
+
+        .form-input{
+            padding: 5px;
+            width: 97%;
+            border: 1px solid gray;
+            border-radius: 4px;
+            height: 25px;
+            outline: none;
+            font-size: 17px;
+
+            // &:focus{
+            //     border: 2px solid $background-color ;
+            // }
+        }
+       
+    }
+    .label-password{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 25px;
+        margin-top: 20px;
+        font-size: 15px;
+        p{
+            margin-top: 0;
+        a{
+            text-decoration: none;
+            margin-top: 0px;
+            color: $text_color;
+        }
+    }
+    a{
+        text-decoration: none;
+        margin-top: 0px;
+        color: $text_color;
+    }
+    
+    }
+    // register
+    .para{
+        justify-content: center;
+    }
+    // verification code
+    .verification{
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        .verify{
+            width: 13%;
+            text-align: center;
+        }
+
+        .verify::-webkit-outer-spin-button,
+        ::-webkit-inner-spin-button {
+           
+            display: none;
+        }
+      }
+    .signin-button{
+        width: 100%;
+        margin-top: 20px;
+
+        .verify-code{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background: $background-color;
+            color: white;
+            font-size: 19px;
+            cursor: pointer;
+            transition: all 0.2 ease;
+        }
+        .active-button:hover{
+            background: $hover_background-color;
+        }
+
+        .signin{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background: $background-color;
+            color: white;
+            font-size: 19px;
+            cursor: pointer;
+            transition: all 0.2 ease;
+
+            &:hover{
+                background: $hover_background-color;
+            }
+
+            img{
+                width: 10%;
+                position: absolute;
+                top: 0;
+                // left: 160px; 
+            }
+        }
+        .google-auth{
+            height: 45px;
+            // border: 1px solid rgb(199, 199, 199);
+            background: transparent;
+
+            &:hover{
+                background: transparent;
+            }
+        }
+    }
+    .option{
+        text-align: center;
+        color: $signin_text-color;
+    }
+    }
+}
+// media query
+@media (max-width: 500px) {
+    .main-component{
+        width: 100%;
+        height: 500px;
+        margin: 30px auto;
+    
+        .logo{
+            // width: 100px;
+            height: 8rem;
+            margin: auto;
+            text-align: center;
+    
+            img{
+                width: 25%;
+            }
+            h1{
+                margin-top: 0px;
+                font-size: 25px;
+            }
+        }
+        form{
+            width: 90%;
+            margin: auto;
+            height: 330px;
+            // background: red;
+           
+    
+            .form-control{
+              margin-top: 30px;
+            //   .email-label{
+            //     margin-top: 50px;
+            //   }
+    
+            .form-input{
+                padding: 5px;
+                width: 95%;
+                border: 1px solid gray;
+                border-radius: 4px;
+                height: 25px;
+                outline: none;
+                font-size: 17px;
+    
+                &:focus{
+                    border: 2px solid $background-color ;
+                }
+            }
+        }
+        .label-password{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 25px;
+            margin-top: 20px;
+             font-size: 15px;
+            p{
+                width: 40%;
+                margin-top: 0;
+               
+            a{
+                text-decoration: none;
+                margin-top: 0px;
+                color: $text_color;
+            }
+        }
+        a{
+            text-decoration: none;
+            margin-top: 0px;
+            color: $text_color;
+        }
+        
+        }   
+        .verification{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            .verify{
+                width: 13%;
+                text-align: center;
+            }
+    
+            .verify::-webkit-outer-spin-button,
+            ::-webkit-inner-spin-button {
+               
+                display: none;
+            }
+          }
+        .signin-button{
+            width: 100%;
+            margin-top: 30px;
+    
+            .signin{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                padding: 10px;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background: $background-color;
+                color: white;
+                font-size: 19px;
+                cursor: pointer;
+    
+                img{
+                    width: 10%;
+                    position: absolute;
+                    top: 0px;
+                    // left: 160px; 
+                }
+            }
+            .google-auth{
+                height: 45px;
+                // border: 1px solid gray;
+                background: transparent;
+            }
+        }
+        .option{
+            text-align: center;
+            color: $signin_text-color;
+        }
+        .options{
+            padding-top: 15px;
+            text-align: center;
+            color: $signin_text-color;
+        }
+        }
+    }
+}
